@@ -1,5 +1,8 @@
 import { Routes } from 'huncwot';
 import { OK } from 'huncwot/response';
+import Background from 'huncwot/background';
+
+import SendEmail from '../../tasks/SendEmail';
 
 const routes: Routes = {
   GET: {
@@ -14,6 +17,11 @@ const routes: Routes = {
     // set your own headers
     '/headers': _ => {
       return { body: 'Hello B', statusCode: 201, headers: { 'Authorization': 'PASS' } };
+    },
+
+    '/send': async _ => {
+      await Background.schedule({ task: SendEmail, payload: { name: 'Zaiste' } });
+      return 'scheduled';
     }
   },
   POST: {
