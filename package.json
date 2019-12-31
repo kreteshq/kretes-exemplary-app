@@ -6,8 +6,8 @@
     "start": "stmux -w always -e ERROR -m beep,system -- [ -t 'Client' 'huncwot client' .. -t 'Server' 'huncwot server' ]"
   },
   "dependencies": {
-    "huncwot": "0.50.1"
     "graphile-worker": "^0.2.0",
+    "huncwot": "0.51.0"
   },
   "@pika/web": {
     "webDependencies": []
@@ -19,12 +19,12 @@
   ],
   "devDependencies": {
     "@pika/web": "^0.6.1",
-    "@wessberg/rollup-plugin-ts": "^1.1.83",
-    "chokidar": "^3.3.0",
+    "@wessberg/rollup-plugin-ts": "^1.2.0",
+    "chokidar": "^3.3.1",
     "cross-env": "^6.0.3",
-    "node-pg-migrate": "^4.1.0",
-    "stmux": "^1.7.1",
-    "typescript": "^3.7.3",
+    "node-pg-migrate": "^4.2.0",
+    "stmux": "^1.8.0",
+    "typescript": "^3.7.4",
     "prettier": "^1.19.1",
     "rollup-plugin-livereload": "^1.0.4",
     "rollup-plugin-serve": "^1.0.1"
