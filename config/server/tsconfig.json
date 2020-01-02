@@ -9,6 +9,7 @@
     "outDir": "../../dist",
     "rootDir": "../../",
     "strict": true,
+    "sourceMap": true,
     "moduleResolution": "node",
     "baseUrl": "../..",
     "paths": {
@@ -23,5 +24,6 @@
   "include": [
     "*.ts",
     "../../features/**/Controller/**.ts",
+    "../../features/**/Service/**.ts",
   ]
 }
