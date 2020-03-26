@@ -2,7 +2,7 @@ import { Routes } from 'huncwot';
 import { OK } from 'huncwot/response';
 import Background from 'huncwot/background';
 
-import SendEmail from '../../tasks/SendEmail';
+import SendEmail from 'SendEmail';
 
 const routes: Routes = {
   GET: {
