@@ -6,10 +6,10 @@
   "version": "0.2.0",
   "compounds": [
     {
-      "name": "Huncwot: Start",
+      "name": "Debug",
       "configurations": [
-        "Huncwot: Client",
-        "Huncwot: Server"
+        "Debug Client",
+        "Debug Server"
       ]
     }
   ],
@@ -17,11 +17,11 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "Launch Chrome",
+      "name": "Debug Client",
       "url": "http://localhost:10001",
       "sourceMaps": true,
       "webRoot": "${workspaceFolder}/public",
-      "preLaunchTask": "Huncwot: Client"
+      //"preLaunchTask": "Huncwot: Client"
     },
     {
       "type": "node",
@@ -32,8 +32,6 @@
         "server"
       ],
       "restart": true,
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "openOnSessionStart",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ],
@@ -44,14 +42,9 @@
     },
     {
       "type": "node",
-      "request": "launch",
-      "name": "Huncwot: Client",
-      "program": "${workspaceFolder}/node_modules/huncwot/cli.js",
-      "args": [
-        "client"
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "openOnSessionStart",
+      "request": "attach",
+      "name": "Debug Server",
+      "restart": true,
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ],
@@ -59,7 +52,6 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      //"preLaunchTask": "${defaultBuildTask}"
     }
   ]
 }
