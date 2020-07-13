@@ -18,6 +18,14 @@
         "tasks/*"
       ]
     },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": [
+          "*"
+        ]
+      }
+    ],
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "skipLibCheck": true
@@ -25,6 +33,6 @@
   "include": [
     "*.ts",
     "../../features/**/Controller/**.ts",
-    "../../features/**/Service/**.ts",
+    "../../features/**/Service/**.ts"
   ]
 }

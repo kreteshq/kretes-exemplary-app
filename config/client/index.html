@@ -7,5 +7,10 @@
   </head>
   <body>
     <div id="app"></div>
+    <script type="module">
+      import { App } from 'Base/View/index.ts';
+      const appElement = document.getElementById("app")
+      appElement.innerHTML = App;
+    </script>
   </body>
 </html>
