@@ -1,0 +1,40 @@
+$ var personPromise = new Promise((resolve, reject) => {
+    setTimeout(function() {
+        resolve({
+            name: 'Frank'
+        });
+    }, 4000);
+});
+
+
+<html>
+<head>
+  <meta>
+</head>
+<body>
+
+<h1>This is header</h1>
+
+<await(personPromise) timeout=5000>
+    <@placeholder>
+        <!-- Displayed while promise is pending -->
+
+        Loading...
+    </@placeholder>
+
+    <@then|person|>
+        <!-- Displayed if promise resolves -->
+
+        <div>Hello ${person.name}!</div>
+    </@then>
+
+    <@catch|err|>
+        <!-- Displayed if promise rejects -->
+
+        Caught error: ${err.name}.
+    </@catch>
+</await>
+
+<h1>This is footer</h1>
+</body>
+</html>

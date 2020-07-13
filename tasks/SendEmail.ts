@@ -1,6 +1,6 @@
-import { Task } from 'huncwot';
+// import { Task } from 'kretes';
 
-const SendEmail: Task = async payload => {
+const SendEmail = (payload: any) => {
   const { name } = payload;
   console.log(`Here is: ${name}`);
 };

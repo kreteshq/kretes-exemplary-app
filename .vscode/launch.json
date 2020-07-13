@@ -18,27 +18,9 @@
       "type": "chrome",
       "request": "launch",
       "name": "Debug Client",
-      "url": "http://localhost:10001",
+      "url": "http://localhost:5544",
       "sourceMaps": true,
-      "webRoot": "${workspaceFolder}/public",
-      //"preLaunchTask": "Huncwot: Client"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Huncwot: Server",
-      "program": "${workspaceFolder}/node_modules/huncwot/cli.js",
-      "args": [
-        "server"
-      ],
-      "restart": true,
-      "outFiles": [
-        "${workspaceFolder}/dist/**/*.js"
-      ],
-      "sourceMaps": true,
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "webRoot": "${workspaceFolder}/public"
     },
     {
       "type": "node",
@@ -51,7 +33,7 @@
       "sourceMaps": true,
       "skipFiles": [
         "<node_internals>/**"
-      ],
+      ]
     }
   ]
 }
