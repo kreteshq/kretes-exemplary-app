@@ -1,11 +1,11 @@
 import { Planet } from 'Planet';
 
-export interface PlanetServiceInterface {
+export interface PlanetService {
   browse(): Promise<Planet>;
 }
 
-export class PlanetService implements PlanetServiceInterface {
-  browse(): Promise<Planet> {
-    throw new Error("Method not implemented.");
+export default class implements PlanetService {
+  async browse(): Promise<Planet> {
+    return { id: 11, number: '22', createdAt: 'asdfs'} as Planet;
   }
 }

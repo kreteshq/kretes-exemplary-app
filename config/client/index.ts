@@ -1,4 +1,4 @@
-// import { App } from 'Base/View';
+import { App } from 'Base/View';
 // import { BaseRequester } from 'Base/Requester'
 // import { PlanetRequester } from 'Planet/Requester'
 
@@ -14,3 +14,10 @@
 //   const reply = await planetRequester.browse()
 //   console.log(`Reply: ${reply}`);
 // })
+
+import * as Planet from 'Planet/Caller'
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const reply = await Planet.browse();
+  console.log(`Reply: ${reply}`);
+})
