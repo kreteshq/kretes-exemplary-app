@@ -2,7 +2,7 @@ import fs from 'fs';
 import { Routes, response, routing, background } from 'kretes';
 
 const { OK } = response;
-const { Route: { GET, POST } } = routing;
+const { Route: { GET, POST, Resource } } = routing;
 const { schedule } = background;
 
 import SendEmail from 'SendEmail';
@@ -28,16 +28,12 @@ const routes: Routes = [
   POST('/bim', request => {
     return `Hello POST! ${request.params.name}`;
   }),
-
-  // Resources: [
-  //   {
-  //     feature: 'Planet',
-  //     alias: 'planets',
-  //     children: [
-  //       { feature: 'Moon', alias: 'moons' }
-  //     ]
-  //   }
-  // ]
+  ...Resource('Planet', {
+    alias: 'planets',
+    children: [{
+      feature: 'Moon', alias: 'moons'
+    }]
+  })
  ];
 
 export default routes;
