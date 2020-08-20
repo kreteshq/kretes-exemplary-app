@@ -8,5 +8,6 @@ pkgs.mkShell {
   ];
   shellHook = ''
     export PGDATA=./db/content
+    export PGPORT=5454
   '';
 }
