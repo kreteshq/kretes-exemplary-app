@@ -6,6 +6,6 @@ export interface PlanetService {
 
 export default class implements PlanetService {
   async browse(): Promise<Planet> {
-    return { id: 11, number: '22', createdAt: 'asdfs'} as Planet;
+    return { id: 11, name: '22', createdAt: 'asdfs'} as Planet;
   }
 }
